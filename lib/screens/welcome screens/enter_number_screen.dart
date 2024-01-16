@@ -51,7 +51,7 @@ class _EnterNumberScreenState extends State<EnterNumberScreen> {
                       children: [
                         const Text(
                           'Digite o teu número de telefone',
-                          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w400),
+                          style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w400),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 30.0),

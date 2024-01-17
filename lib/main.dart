@@ -1,4 +1,3 @@
-import 'package:driverapp/screens/welcome%20screens/confirm_number_screen.dart';
 import 'package:driverapp/screens/welcome%20screens/enter_number_screen.dart';
 import 'package:driverapp/screens/welcome%20screens/logo_screen.dart';
 import 'package:driverapp/screens/welcome%20screens/start_screen.dart';
@@ -20,8 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/logo':(context) => const LogoScreen(), 
         '/start': (context) => const StartScreen(),    
-        '/enter': (context) => const EnterNumberScreen(),   
-        '/confirm': (context) => const ConfirmNumberScreen(),      
+        '/enter': (context) => const EnterNumberScreen(),       
       }
     );
   }

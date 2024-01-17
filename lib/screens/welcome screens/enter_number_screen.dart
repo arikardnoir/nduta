@@ -22,9 +22,10 @@ class _EnterNumberScreenState extends State<EnterNumberScreen> {
       body: Center(
           child: GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ConfirmNumberScreen()),
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ConfirmNumberScreen(),
+                ),
               );
             },
             child: Column(

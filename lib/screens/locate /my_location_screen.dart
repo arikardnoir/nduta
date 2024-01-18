@@ -34,8 +34,8 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
             ),
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.03,
-              right: MediaQuery.of(context).size.width * 0.1,
-              left: MediaQuery.of(context).size.width * 0.1,
+              right: MediaQuery.of(context).size.width * 0.04,
+              left: MediaQuery.of(context).size.width * 0.04,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -110,7 +110,7 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                           borderRadius: BorderRadius.circular(31.0),
                         ),
                         backgroundColor: Colors.amber,
-                        fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 45),
+                        fixedSize: Size(MediaQuery.of(context).size.width * 0.9, 45),
                       ),
                       onPressed: () {
                         Navigator.of(context).push(

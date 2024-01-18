@@ -1,5 +1,5 @@
 
-import 'package:driverapp/screens/welcome%20screens/confirm_number_screen.dart';
+import 'package:driverapp/screens/welcome/confirm_number_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 

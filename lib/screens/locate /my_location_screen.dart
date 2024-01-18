@@ -1,3 +1,4 @@
+import 'package:driverapp/screens/locate%20/where_to_go_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyLocationScreen extends StatefulWidget {
@@ -28,9 +29,7 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                   Icons.menu_rounded,
                   color: Colors.black,
                 ),
-                onPressed: () {
-                  // Adicione a lógica do botão aqui
-                },
+                onPressed: () {},
               ),
             ),
             Positioned(
@@ -62,7 +61,7 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                             textAlign: TextAlign.left,
                           ),
                           SizedBox(
-                            height: 170.0, // Ajuste a altura conforme necessário
+                            height: 160.0,
                             child: ListView(
                               children: <Widget>[
                                 ListTile(
@@ -95,7 +94,6 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                                   subtitle: const Text('09, Av. Pedro de Castro, Bairro Golfe', style: TextStyle(color: Colors.grey),),
                                   onTap: () {},
                                 ),
-                                // Adicione mais ListTiles conforme necessário
                               ],
                             ),
                           ),
@@ -103,7 +101,7 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16.0), // Ajuste conforme necessário
+                  const SizedBox(height: 16.0), 
                   SizedBox(
                     //width: MediaQuery.of(context).size.width * 0.8,
                     child: ElevatedButton(
@@ -115,7 +113,11 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                         fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 45),
                       ),
                       onPressed: () {
-                        // Adicione a lógica do botão aqui
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const WhereToGoLocationScreen(),
+                          ),
+                        );
                       },
                       child: const Text(
                         "Aonde queres ir?",

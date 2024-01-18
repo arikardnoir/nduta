@@ -1,6 +1,6 @@
-import 'package:driverapp/screens/welcome%20screens/enter_number_screen.dart';
-import 'package:driverapp/screens/welcome%20screens/logo_screen.dart';
-import 'package:driverapp/screens/welcome%20screens/start_screen.dart';
+import 'package:driverapp/screens/welcome/enter_number_screen.dart';
+import 'package:driverapp/screens/welcome/logo_screen.dart';
+import 'package:driverapp/screens/welcome/start_screen.dart';
 import 'package:flutter/material.dart';
 
 

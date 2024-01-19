@@ -1,3 +1,4 @@
+import 'package:driverapp/screens/interation/contact_driver_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -101,12 +102,12 @@ class _DriverScreenState extends State<DriverScreen> {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const DriverScreen(),
+                        builder: (context) => const ContactDriverScreen(),
                       ),
                     );
                   },
                   child: const Text(
-                    "Começar",
+                    "Iniciar",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,

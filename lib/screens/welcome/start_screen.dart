@@ -53,7 +53,7 @@ class StartScreen extends StatelessWidget {
                       fixedSize: Size(MediaQuery.of(context).size.width * 0.9, 45),
                     ),
                     child: const Text(
-                      "Iniciar",
+                      "Iniciar agora",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,

@@ -1,14 +1,14 @@
-import 'package:driverapp/screens/locate%20/where_to_go_screen.dart';
+import 'package:driverapp/screens/locate/driver_screen.dart';
 import 'package:flutter/material.dart';
 
-class MyLocationScreen extends StatefulWidget {
-  const MyLocationScreen({Key? key}) : super(key: key);
+class RouteScreen extends StatefulWidget {
+  const RouteScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyLocationScreen> createState() => _MyLocationScreenState();
+  State<RouteScreen> createState() => _RouteScreenState();
 }
 
-class _MyLocationScreenState extends State<MyLocationScreen> {
+class _RouteScreenState extends State<RouteScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +18,7 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              'assets/images/mylocation.jpg',
+              'assets/images/route.jpg',
               fit: BoxFit.cover,
             ),
             Positioned(
@@ -26,10 +26,10 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
               left: 10.0,
               child: IconButton(
                 icon: const Icon(
-                  Icons.menu_rounded,
+                  Icons.arrow_back,
                   color: Colors.black,
                 ),
-                onPressed: () {},
+                onPressed: () {Navigator.pop(context);},
               ),
             ),
             Positioned(
@@ -50,48 +50,41 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(height: 15.0,),
-                          const Text(
-                            'Viagens recentes',
-                            style: TextStyle(
-                              fontSize: 16.0, 
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
                           SizedBox(
                             height: 160.0,
                             child: ListView(
                               children: <Widget>[
                                 ListTile(
                                   contentPadding: const EdgeInsets.all(-10),
-                                  leading: const Icon(Icons.fmd_good_outlined),
+                                  leading: const Icon(Icons.local_taxi),
+                                  trailing: const Text('120 Kz', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),),
                                   title: const Text(
-                                    'Talatona',
-                                    style: TextStyle(fontWeight: FontWeight.w400,),
+                                    'António Manuel',
+                                    style: TextStyle(fontWeight: FontWeight.w500,),
                                   ),
-                                  subtitle: const Text('25, Rua do Comércio, Bairro da Camama', style: TextStyle(color: Colors.grey),),
+                                  subtitle: const Text('Qualquer um pode pagar!', style: TextStyle(color: Colors.grey),),
                                   onTap: () {},
                                 ),
                                 ListTile(
                                   contentPadding: const EdgeInsets.all(0),
-                                  leading: const Icon(Icons.fmd_good_outlined),
+                                  leading: const Icon(Icons.local_taxi),
+                                  trailing: const Text('120 Kz', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),),
                                   title: const Text(
-                                    'Kilamba Kiaxi',
-                                    style: TextStyle(fontWeight: FontWeight.w400),
+                                    'Gustavo Lobato',
+                                    style: TextStyle(fontWeight: FontWeight.w500),
                                   ),
-                                  subtitle: const Text('09, Av. Pedro de Castro, Bairro Golfe', style: TextStyle(color: Colors.grey),),
+                                  subtitle: const Text('Não perca tempo e poupe dinheiro.', style: TextStyle(color: Colors.grey),),
                                   onTap: () {},
                                 ),
                                 ListTile(
                                   contentPadding: const EdgeInsets.all(0),
-                                  leading: const Icon(Icons.fmd_good_outlined),
+                                  leading: const Icon(Icons.local_taxi),
+                                  trailing: const Text('119 Kz', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),),
                                   title: const Text(
-                                    'Kilamba Kiaxi',
-                                    style: TextStyle(fontWeight: FontWeight.w400),
+                                    'Alfredo Ambrósio',
+                                    style: TextStyle(fontWeight: FontWeight.w500),
                                   ),
-                                  subtitle: const Text('09, Av. Pedro de Castro, Bairro Golfe', style: TextStyle(color: Colors.grey),),
+                                  subtitle: const Text('Rápido, barato e seguro!', style: TextStyle(color: Colors.grey),),
                                   onTap: () {},
                                 ),
                               ],
@@ -115,12 +108,12 @@ class _MyLocationScreenState extends State<MyLocationScreen> {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const WhereToGoLocationScreen(),
+                            builder: (context) => const DriverScreen(),
                           ),
                         );
                       },
                       child: const Text(
-                        "Aonde queres ir?",
+                        "Confirmar",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16.0,

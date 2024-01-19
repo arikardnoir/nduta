@@ -1,14 +1,14 @@
-import 'package:driverapp/screens/locate%20/where_to_go_screen.dart';
+import 'package:driverapp/screens/locate/where_to_go_screen.dart';
 import 'package:flutter/material.dart';
 
-class RouteScreen extends StatefulWidget {
-  const RouteScreen({Key? key}) : super(key: key);
+class MyLocationScreen extends StatefulWidget {
+  const MyLocationScreen({Key? key}) : super(key: key);
 
   @override
-  State<RouteScreen> createState() => _RouteScreenState();
+  State<MyLocationScreen> createState() => _MyLocationScreenState();
 }
 
-class _RouteScreenState extends State<RouteScreen> {
+class _MyLocationScreenState extends State<MyLocationScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +18,7 @@ class _RouteScreenState extends State<RouteScreen> {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              'assets/images/route.jpg',
+              'assets/images/mylocation.jpg',
               fit: BoxFit.cover,
             ),
             Positioned(
@@ -26,10 +26,10 @@ class _RouteScreenState extends State<RouteScreen> {
               left: 10.0,
               child: IconButton(
                 icon: const Icon(
-                  Icons.arrow_back,
+                  Icons.menu_rounded,
                   color: Colors.black,
                 ),
-                onPressed: () {Navigator.pop(context);},
+                onPressed: () {},
               ),
             ),
             Positioned(
@@ -50,41 +50,48 @@ class _RouteScreenState extends State<RouteScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          const SizedBox(height: 15.0,),
+                          const Text(
+                            'Viagens recentes',
+                            style: TextStyle(
+                              fontSize: 16.0, 
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
                           SizedBox(
                             height: 160.0,
                             child: ListView(
                               children: <Widget>[
                                 ListTile(
                                   contentPadding: const EdgeInsets.all(-10),
-                                  leading: const Icon(Icons.local_taxi),
-                                  trailing: const Text('120 Kz', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),),
+                                  leading: const Icon(Icons.fmd_good_outlined),
                                   title: const Text(
-                                    'António Manuel',
-                                    style: TextStyle(fontWeight: FontWeight.w500,),
+                                    'Talatona',
+                                    style: TextStyle(fontWeight: FontWeight.w400,),
                                   ),
-                                  subtitle: const Text('Qualquer um pode pagar!', style: TextStyle(color: Colors.grey),),
+                                  subtitle: const Text('25, Rua do Comércio, Bairro da Camama', style: TextStyle(color: Colors.grey),),
                                   onTap: () {},
                                 ),
                                 ListTile(
                                   contentPadding: const EdgeInsets.all(0),
-                                  leading: const Icon(Icons.local_taxi),
-                                  trailing: const Text('120 Kz', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),),
+                                  leading: const Icon(Icons.fmd_good_outlined),
                                   title: const Text(
-                                    'Gustavo Lobato',
-                                    style: TextStyle(fontWeight: FontWeight.w500),
+                                    'Kilamba Kiaxi',
+                                    style: TextStyle(fontWeight: FontWeight.w400),
                                   ),
-                                  subtitle: const Text('Não perca tempo e poupe dinheiro.', style: TextStyle(color: Colors.grey),),
+                                  subtitle: const Text('09, Av. Pedro de Castro, Bairro Golfe', style: TextStyle(color: Colors.grey),),
                                   onTap: () {},
                                 ),
                                 ListTile(
                                   contentPadding: const EdgeInsets.all(0),
-                                  leading: const Icon(Icons.local_taxi),
-                                  trailing: const Text('119 Kz', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),),
+                                  leading: const Icon(Icons.fmd_good_outlined),
                                   title: const Text(
-                                    'Alfredo Ambrósio',
-                                    style: TextStyle(fontWeight: FontWeight.w500),
+                                    'Kilamba Kiaxi',
+                                    style: TextStyle(fontWeight: FontWeight.w400),
                                   ),
-                                  subtitle: const Text('Rápido, barato e seguro!', style: TextStyle(color: Colors.grey),),
+                                  subtitle: const Text('09, Av. Pedro de Castro, Bairro Golfe', style: TextStyle(color: Colors.grey),),
                                   onTap: () {},
                                 ),
                               ],
@@ -113,7 +120,7 @@ class _RouteScreenState extends State<RouteScreen> {
                         );
                       },
                       child: const Text(
-                        "Confirmar",
+                        "Aonde queres ir?",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16.0,

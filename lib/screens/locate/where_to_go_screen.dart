@@ -1,5 +1,5 @@
 
-import 'package:driverapp/screens/locate%20/route_screen.dart';
+import 'package:driverapp/screens/locate/route_screen.dart';
 import 'package:flutter/material.dart';
 
 class WhereToGoLocationScreen extends StatefulWidget {

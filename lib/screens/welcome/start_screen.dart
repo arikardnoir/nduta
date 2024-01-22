@@ -41,7 +41,7 @@ class StartScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(height: 20.0),
+                const SizedBox(height: 200.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: ElevatedButton(
@@ -50,7 +50,7 @@ class StartScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(31.0),
                       ),
                       backgroundColor: Colors.amber,
-                      fixedSize: const Size(370, 50),
+                      fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 45),
                     ),
                     child: const Text(
                       "Iniciar",

@@ -1,5 +1,5 @@
 
-import 'package:driverapp/screens/welcome%20screens/confirm_number_screen.dart';
+import 'package:driverapp/screens/welcome/confirm_number_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
@@ -22,9 +22,10 @@ class _EnterNumberScreenState extends State<EnterNumberScreen> {
       body: Center(
           child: GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ConfirmNumberScreen()),
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ConfirmNumberScreen(),
+                ),
               );
             },
             child: Column(
@@ -51,7 +52,7 @@ class _EnterNumberScreenState extends State<EnterNumberScreen> {
                       children: [
                         const Text(
                           'Digite o teu número de telefone',
-                          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w400),
+                          style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w400),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 30.0),

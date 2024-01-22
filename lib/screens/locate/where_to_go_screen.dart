@@ -1,4 +1,5 @@
 
+import 'package:driverapp/screens/locate/route_screen.dart';
 import 'package:flutter/material.dart';
 
 class WhereToGoLocationScreen extends StatefulWidget {
@@ -9,6 +10,16 @@ class WhereToGoLocationScreen extends StatefulWidget {
 }
 
 class _WhereToGoLocationScreenState extends State<WhereToGoLocationScreen> {
+
+   @override
+  void initState(){
+    super.initState();
+    Future.wait([
+      Future.delayed(const Duration(milliseconds: 10000)),
+    ]).then((value) =>  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const RouteScreen(),),),);
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,9 +40,7 @@ class _WhereToGoLocationScreenState extends State<WhereToGoLocationScreen> {
                   Icons.arrow_back,
                   color: Colors.black,
                 ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
+                onPressed: () {Navigator.pop(context);},
               ),
             ),
             Positioned(

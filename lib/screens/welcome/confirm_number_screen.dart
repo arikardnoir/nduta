@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-import 'package:driverapp/screens/locate%20/my_location_screen.dart';
+import 'package:driverapp/screens/locate/my_location_screen.dart';
 
 class ConfirmNumberScreen extends StatefulWidget {
   const ConfirmNumberScreen({Key? key}) : super(key: key);
@@ -59,7 +59,7 @@ class _ConfirmNumberScreenState extends State<ConfirmNumberScreen> {
                     borderRadius: BorderRadius.circular(31.0),
                   ),
                   backgroundColor: Colors.amber,
-                  fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 45),
+                  fixedSize: Size(MediaQuery.of(context).size.width * 0.9, 45),
                 ),
                 child: const Text(
                   "Avançar",

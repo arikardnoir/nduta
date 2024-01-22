@@ -50,10 +50,10 @@ class StartScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(31.0),
                       ),
                       backgroundColor: Colors.amber,
-                      fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 45),
+                      fixedSize: Size(MediaQuery.of(context).size.width * 0.9, 45),
                     ),
                     child: const Text(
-                      "Iniciar",
+                      "Iniciar agora",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
